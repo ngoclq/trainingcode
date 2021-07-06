@@ -10,12 +10,12 @@ swagger(app)
 
 const server = http.createServer(app)
 
-var port = normalizePort(process.env.PORT || '5000');
+var port = normalizePort(config.port || '5000');
 try {
   server.listen(port)
   server.on('error', onError);
   server.on('listening', onListening);
-  logger.tick(`server listen at ${process.env.PORT}`)
+  logger.tick(`server listen at ${config.port}`)
   logger.command('Ctrl + C', 'exit process')
 } catch (error) {
   logger.error(`server listen err ${error}`)
