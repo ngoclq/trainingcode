@@ -28,10 +28,6 @@
     "mongoose-timestamp": "^0.6.0",
     "mongoose-to-swagger": "^1.0.3",
     "morgan": "^1.10.0",
-    "swagger-jsdoc": "^4.0.0",
-    "swagger-ui-express": "^4.1.4"
-  },
-  "devDependencies": {
     "@babel/core": "^7.11.4",
     "@babel/node": "^7.10.5",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
@@ -41,6 +37,10 @@
     "@babel/register": "^7.10.5",
     "@babel/runtime": "^7.11.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "swagger-jsdoc": "^4.0.0",
+    "swagger-ui-express": "^4.1.4"
+  },
+  "devDependencies": {
     "console-stamp": "^0.2.9",
     "jest": "^26.6.3",
     "nodemon": "^2.0.4",
