@@ -1,0 +1,32 @@
+connect to mongo in mongo docker image from local: 
+ mongo "mongodb://localhost:55560"
+
+clean all image: 
+ - docker system prune -a
+run 1 image: 
+docker run -it 409c3f937574 /bin/bash
+
+create image: 
+- docker-compose up
+- docker images 
+- docker ps -a
+
+To push image:
+- docker login
+
+then tag image and push to docker hub, ex:
+- docker tag 017245233629 doannucphys/web
+- docker push doannucphys/web
+and for mongo image:
+- docker tag 409c3f937574 doannucphys/mongo
+- docker push doannucphys/mongo
+
+Usage need to run mongo image then run web image and link to it:
+- docker login
+- docker run -d -p 55560:27017 --name mongo doannucphys/mongo
+- docker run -d -p 3000:3000 --link mongo:mongo --name web doannucphys/web
+
+then open localhost:3000 
+done!
+
+

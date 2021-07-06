@@ -1,0 +1,64 @@
+DANH SÁCH APIS CẦN SỬ DỤNG CHO 
+HỆ THỐNG STAKING MAP
+
+OK ------------- DONE
+1. API lấy dữ liệu của node Theo ID 
+Params: ID
+Respones:
+type: POS | POW
+joinedAt: Date
+stakeAmount: number
+country: string
+referral: number (Tổng số node được node này giới thiệu)
+
+OK ------------- DONE
+2. API lấy danh sách quốc gia có CSE Nodes (so node theo tung quoc gia)
+Params: limit, page
+Respones: 
+rank: number | Thứ hạng của quốc gia
+country: string
+ percentOfTotal: number | Phần trăm số nodes của quốc gia này sở hữu trên tổng
+ nodes: number | Tổng số node của quốc gia
+
+OK -- DONE
+3. API danh sách node có thu nhập nhiều nhất (?? lay ở đâu ? tính theo stakeAmount?)
+Params: limit
+Response:
+type: POS | POW
+joinedAt: Date
+stakeAmount: number
+country: string
+referral: number
+percentOfTotal: number (percent by the max)
+
+OK
+4. API lấy thông tin CSE (dong tien)
+Params:
+Response: 
+createWallets: number | Tổng số ví đã được tạo (set tu dong bang tay, sau nay co 
+the de ramdom, van de api) => 1 node tạo 1 ví ? 
+releasedCSE | Số CSE đã phát hành
+remainingCSE | Số CSE còn lại chưa phát hành
+
+5. API lấy dữ liệu thống kê 24h (theo node ? )
+Params: 
+Response: 
+stake: number | Tổng số CSE đã stake (đã giao dịch)
+rewards: number | Tổng số CSE thưởng đã nhận
+mining: number | Tổng số CSE đang đào
+usedFee: number | Tổng số phí đã sử dụng (??)
+online: number | Tổng số node đang trực tuyến (còn hoạt động)
+joined: number | Tổng số node đã tham gia (mới tham gia)
+
+(bo qua)
+6. Cổng lắng nghe các sự kiện liên quan CSE Nodes
+- Node mới gia nhập
+- Block mới được đào
+*Cần trả về theo kèm thông tin node (ID, country)
+-> bo qua cai so 6
+
+
+
+prject link:
+https://nodes.cse30.io/
+
